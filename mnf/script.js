@@ -2,7 +2,7 @@
 
 // ข้อมูลน้ำสูญเสียในแต่ละเดือน
 const waterLossData = [
-    { month: 'January', produced: 1000, sold: 800 },
+    { month: 'มกราคม', produced: 10000, sold: 800 },
     { month: 'February', produced: 1100, sold: 850 },
     { month: 'March', produced: 1200, sold: 900 },
     { month: 'April', produced: 1150, sold: 850 },
