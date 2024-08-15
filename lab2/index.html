@@ -1,1 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Cards</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ADD8E6;
+            font-family: "Mitr", sans-serif;
+            font-style: normal;
+            /* สีฟ้าเฉด */
+        }
+
+        .card {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .btn-custom {
+            background-color: #4fa4ff;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #65aefc;
+        }
+
+        .box {
+            border: 1px solid #000;
+            /* กรอบสี่เหลี่ยม */
+            padding: 1rem;
+            /* ระยะห่างภายในกรอบ */
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+
+        <!-- ข้อ 1 ทำนายอารมณ์ของข้อความ -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">ข้อ 1 ทำนายอารมณ์ของข้อความ</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="card-title">ใส่ข้อความในช่องว่างและกดวิเคราะห์</h5>
+                        <input type="text" class="form-control mb-3" id="emo_text">
+                        <button type="button" class="btn btn-info btn-custom" id="emo_button">วิเคราะห์ข้อความ</button>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="card-title">ผลลัพธ์</h5>
+                        <div class="box">
+                            <div id="emo_result"></div>
+                            <!-- <p class="card-text" id="emo_result"></p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+
+        <!-- ข้อ 2 ตรวจสอบการแสดงความคิดเห็นที่มีลักษณะการรังแกในโลกไซเบอร์ -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">ข้อ 2 ตรวจสอบการแสดงความคิดเห็นที่มีลักษณะการรังแกในโลกไซเบอร์</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="card-title">ใส่ข้อความในช่องว่างและกดวิเคราะห์</h5>
+                        <input type="text" class="form-control mb-3" id="bully_text">
+                        <button type="button" class="btn btn-info btn-custom"
+                            id="bully_button">วิเคราะห์ข้อความ</button>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="card-title">ผลลัพธ์</h5>
+                        <div class="box">
+                            <div id="bully_result"></div>
+                            <!-- <p class="card-text" id="emo_result"></p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+
+        <!-- ข้อ 3 แนะนำคำที่เกี่ยวข้องและความหมายใกล้เคียง -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">ข้อ 3 แนะนำคำที่เกี่ยวข้องและความหมายใกล้เคียง</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="card-title">ใส่ข้อความในช่องว่างและกดวิเคราะห์</h5>
+                        <input type="text" class="form-control mb-3" id="wordsim_text">
+                        <button type="button" class="btn btn-info btn-custom"
+                            id="wordsim_button">วิเคราะห์ข้อความ</button>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="card-title">ผลลัพธ์</h5>
+                        <div class="box">
+                            <div id="wordsim_result"></div>
+                            <!-- <p class="card-text" id="emo_result"></p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+
+        <!-- ข้อ 4 แนะนำคำที่สะกดใกล้เคียง -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">ข้อ 4 แนะนำคำที่สะกดใกล้เคียง</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="card-title">ใส่ข้อความในช่องว่างและกดวิเคราะห์</h5>
+                        <input type="text" class="form-control mb-3" id="approx_text">
+                        <button type="button" class="btn btn-info btn-custom"
+                            id="approx_button">วิเคราะห์ข้อความ</button>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="card-title">ผลลัพธ์</h5>
+                        <div class="box">
+                            <div id="approx_result"></div>
+                            <!-- <p class="card-text" id="emo_result"></p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+
+        <!-- ข้อ 5 ระบบตัดคําทีเล็กซ์พลัส ( TLex+ ) -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">ข้อ 5 ระบบตัดคําทีเล็กซ์พลัส ( TLex+ )</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="card-title">ใส่ข้อความในช่องว่างและกดวิเคราะห์</h5>
+                        <input type="text" class="form-control mb-3" id="tlexplus_text">
+                        <button type="button" class="btn btn-info btn-custom"
+                            id="tlexplus_button">วิเคราะห์ข้อความ</button>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="card-title">ผลลัพธ์</h5>
+                        <div class="box">
+                            <div id="tlexplus_result"></div>
+                            <!-- <p class="card-text" id="emo_result"></p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        /**
+         * ตัวอย่างจ้า
+        */
+        // ดึง element ที่มี id เป็น "emo_button" และตั้งค่า onclick event ให้กับ element นั้น
+        document.getElementById("emo_button").onclick = function () {
+            // ดึงค่าจาก element ที่มี id เป็น "txt_input_in_html" และเก็บค่าไว้ในตัวแปร text
+            var text = document.getElementById("txt_input_in_html").value;
+
+            // กำหนด URL ของ API ที่จะส่งคำขอ
+            var url = 'url_ai_forthai';
+
+            // สร้างออบเจกต์ XMLHttpRequest เพื่อส่งคำขอไปยังเซิร์ฟเวอร์
+            var xhr = new XMLHttpRequest();
+
+            // ตั้งค่า HTTP method เป็น 'GET' และระบุ URL ของ API พร้อมระบุว่าเป็น asynchronous (true)
+            xhr.open('GET', url, true);
+
+            // ตั้งค่า header เพื่อส่งค่า Apikey ไปในคำขอ
+            xhr.setRequestHeader('Apikey', 'Ai For thai API KEY');
+
+            // กำหนด event handler สำหรับการเปลี่ยนแปลงสถานะของคำขอ (readyState)
+            xhr.onreadystatechange = function () {
+                // ตรวจสอบว่า readyState เท่ากับ 4 (คำขอเสร็จสมบูรณ์) และสถานะของ HTTP เป็น 200 (OK)
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // แปลงข้อมูลที่ได้จาก response (JSON string) เป็นออบเจกต์ JavaScript
+                    var data = JSON.parse(xhr.responseText);
+
+                    // ดึงค่าผลลัพธ์จากข้อมูลที่แปลงแล้ว
+                    var result = data.result;
+
+                    // สร้างตัวแปร output เพื่อเก็บข้อมูลที่จะนำไปแสดงผล
+                    var output = '';
+
+                    // เพิ่มข้อมูลที่ต้องการแสดงผลเข้าไปในตัวแปร output
+                    output += '';
+
+                    // นำข้อมูลในตัวแปร output ไปแสดงผลใน element ที่มี id เป็น "div_id"
+                    document.getElementById('div_id').innerHTML = output;
+                }
+            };
+
+            // ส่งคำขอไปยังเซิร์ฟเวอร์
+            xhr.send();
+        };
+
+
+
+        /**
+         * ทำนายอารมณ์ของข้อความ
+        */
+        document.getElementById("emo_button").onclick = function () {
+            var emo_text = document.getElementById("emo_text").value;
+
+            var url = 'https://api.aiforthai.in.th/emonews/prediction?text=' + emo_text
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.setRequestHeader('Apikey', '9ir5JCtVKvp2WDvoKPHmgzaVNfrZmVX5');
+            // xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    // console.log(data);
+                    // alert(data.status)
+                    var result = data.result;
+                    var output = '';
+                    output += '<p>คะแนนที่คาดว่ามีอารมณ์ surprise(เซอร์ไพรส์)= ' + result.surprise + '</p>';
+                    output += '<p>คะแนนที่คาดว่ามีอารมณ์ neutral(เป็นกลาง)= ' + result.neutral + '</p>';
+                    output += '<p>คะแนนที่คาดว่ามีอารมณ์ sadness(เศร้า)= ' + result.sadness + '</p>';
+                    output += '<p>คะแนนที่คาดว่ามีอารมณ์ pleasant(เพลิดเพลิน)= ' + result.pleasant + '</p>';
+                    output += '<p>คะแนนที่คาดว่ามีอารมณ์ fear(กลัว)= ' + result.fear + '</p>';
+                    output += '<p>คะแนนที่คาดว่ามีอารมณ์ anger(โกรธ)= ' + result.anger + '</p>';
+                    output += '<p>คะแนนที่คาดว่ามีอารมณ์ joy(สนุก)= ' + result.joy + '</p>';
+                    document.getElementById('emo_result').innerHTML = output;
+                }
+            };
+            xhr.send();
+        };
+
+        /**
+         * ตรวจสอบการแสดงความคิดเห็นที่มีลักษณะการรังแกในโลกไซเบอร์
+         */
+        document.getElementById("bully_button").onclick = function () {
+            var bully_text = document.getElementById("bully_text").value;
+
+            var url = 'https://api.aiforthai.in.th/bully?text=' + bully_text
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.setRequestHeader('Apikey', '9ir5JCtVKvp2WDvoKPHmgzaVNfrZmVX5');
+            // xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    console.log(data);
+                    // alert(data.status)
+                    // var result = data.result;
+
+                    var type = ''
+                    if (data.bully_type == 0) {
+                        type = 'ข้อความทั่วไปซึ่งไม่มีลักษณะของการรังแก'
+                    } else {
+                        switch (data.bully_type[0]) {
+                            case 1:
+                                type = 'ข้อความที่มีการกล่าวถึงบุคลิก รูปลักษณ์ และ พฤติกรรม'
+                                break;
+                            case 2:
+                                type = 'ข้อความที่เป็นคำด่า คำหยาบคาย'
+                                break;
+                            case 3:
+                                type = 'ข้อความคุกคามเกี่ยวกับทางเพศ'
+                                break;
+                            case 4:
+                                type = 'ข้อความที่กล่าวถึง เชื้อชาติ กำเนิด และการใช้ชีวิต'
+                                break;
+                            case 5:
+                                type = 'ข้อความที่กล่าวถึงสติปัญญา และความฉลาด'
+                                break;
+                            case 6:
+                                type = 'ข้อความที่มีการใช้ถ้อยคำรุนแรง การข่มขู่'
+                                break;
+                        }
+                    }
+
+
+
+                    var output = '';
+                    output += '<p>ข้อความ = ' + data.text + '</p>';
+                    output += '<p>ข้อความที่มีลักษณะของการรังแก = ' + data.bully_word[0] + '</p>';
+                    output += '<p>ประเภทข้อความ = ' + type + '</p>';
+                    document.getElementById('bully_result').innerHTML = output;
+                }
+            };
+            xhr.send();
+        };
+
+        /**
+         * แนะนำคำที่เกี่ยวข้องและความหมายใกล้เคียง
+         */
+        document.getElementById("wordsim_button").onclick = function () {
+            var wordsim_text = document.getElementById("wordsim_text").value;
+
+            var url = 'https://api.aiforthai.in.th/thaiwordsim?word=' + wordsim_text + '&numword=5&model=twitter'
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.setRequestHeader('Apikey', '9ir5JCtVKvp2WDvoKPHmgzaVNfrZmVX5');
+            // xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    console.log(data);
+                    // alert(data.status)
+                    var words = data.words;
+                    var output = '';
+
+                    for (var i = 0; i < words.length; i++) {
+                        output += '<p>ใกล้เคียง "' + words[i].score + '" คะแนน คือคำว่า "' + words[i].word + '"</p>';
+                    }
+                    document.getElementById('wordsim_result').innerHTML = output;
+                }
+            };
+            xhr.send();
+        };
+
+        /**
+         * แนะนำคำที่สะกดใกล้เคียง
+         */
+        document.getElementById("approx_button").onclick = function () {
+            var approx_text = document.getElementById("approx_text").value;
+
+            var url = 'https://api.aiforthai.in.th/wordapprox?word=' + approx_text + '&model=personname'
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.setRequestHeader('Apikey', '9ir5JCtVKvp2WDvoKPHmgzaVNfrZmVX5');
+            // xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    console.log(data);
+                    // alert(data.status)
+                    var words = data.words;
+                    var output = '';
+
+                    for (var i = 0; i < words.length; i++) {
+                        output += '<p>ใกล้เคียง "' + words[i].distance + '" คะแนน คือคำว่า "' + words[i].word + '"</p>';
+                    }
+                    document.getElementById('approx_result').innerHTML = output;
+                }
+            };
+            xhr.send();
+        };
+
+        /**
+         * ระบบตัดคําทีเล็กซ์พลัส ( TLex+ )
+         */
+        document.getElementById("tlexplus_button").onclick = function () {
+            var tlexplus_text = document.getElementById("tlexplus_text").value;
+
+            var url = 'https://api.aiforthai.in.th/tlexplus?text=' + tlexplus_text
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.setRequestHeader('Apikey', '9ir5JCtVKvp2WDvoKPHmgzaVNfrZmVX5');
+            // xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    console.log(data);
+                    // alert(data.status)
+                    var tokens = data.tokens;
+                    var output = '';
+
+                    console.log(tokens);
+
+                    for (var i = 0; i < tokens.length; i++) {
+                        output += '<p>' + i + '. "' + tokens[i] + '"</p>';
+                    }
+                    document.getElementById('tlexplus_result').innerHTML = output;
+                }
+            };
+            xhr.send();
+        };
+
+    </script>
+</body>
+
+</html>
